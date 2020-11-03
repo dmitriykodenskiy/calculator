@@ -1,0 +1,114 @@
+@import 'variables'
+
+.container
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 10px
+  font-family: $textFont
+
+.calc-wrapper
+  width: 100%
+  max-width: 400px
+  max-height: 800px
+  background-color:#8d92b59e
+  padding: 10px
+
+.textForm
+  width: 100%
+  margin-top: 10px
+  margin-bottom: 20px
+
+.textInput
+  width: calc(100% - 10px)
+  box-sizing: border-box
+  height: 40px
+  min-height: 40px
+  font-size: 20px
+  text-align: right
+  padding: 5px
+  box-sizing: content-box
+  font-family: $textFont
+  resize: none
+  &[data-resultInput]
+    color: #254679
+
+.controllers
+  &__operators1-wrapper, &__operators2-wrapper, &__numbers
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 10px
+  &__operators1:hover, &__operators2:hover, &__number:hover
+    color: $textColorHover
+    background-color: $backgroundHover
+    transition: .3s
+  &__operators1
+    width: 30%
+    background-color: $background
+    font-weight: bold
+    font-size: 24px
+    color: $textColor
+    text-align: center
+    padding: 12px 0
+    border-radius: 10px
+    cursor: pointer
+    transform: .3s
+    margin-bottom: 10px
+    &_result
+      background-color: #254679
+      font-family: monospace
+    &_backwards
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 13px
+    &:hover #backwards
+      fill: $textColorHover
+  &__operators2
+    width: 24%
+    background-color: $background
+    font-weight: bold
+    font-size: 28px
+    color: $textColor
+    text-align: center
+    font-family: monospace
+    padding: 10px 0
+    border-radius: 10px
+    cursor: pointer
+    transform: .3s
+    margin-bottom: 10px
+    &_multyply
+      font-family: monospace
+  &__numbers
+    flex-wrap: wrap
+    flex-direction: row-reverse
+  &__number
+    width: 30%
+    background-color: $background
+    font-weight: bold
+    font-size: 30px
+    color: $textColor
+    text-align: center
+    padding: 15px 0
+    border-radius: 10px
+    cursor: pointer
+    transform: .3s
+    margin-bottom: 20px
+  &__numbers_0
+    width: 65%
+
+#backwards
+  display: block
+  fill: $textColor
+  max-height: 40px
+  width: 25px
+  pointer-events: none
+
+#inputExpander
+  display: inline-block
+  word-break: break-all
+  font-family: $textFont
+  visibility: hidden

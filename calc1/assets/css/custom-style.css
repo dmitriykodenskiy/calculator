@@ -1,0 +1,178 @@
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans'); */
+
+
+
+
+
+
+body,
+html {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  /* padding-top: 40px !important; */
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main{
+  overflow-x: hidden;
+}
+.container-full {
+  width: 100%;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.row {
+  position: relative;
+}
+
+.kuTopbar {
+  background: #0c4465 none repeat scroll 0 0;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
+
+.kuMessage {
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  padding-right: 20px;
+}
+
+.client-logo-block {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  position: relative;
+  max-height: 42px;
+}
+
+.searchfield-block {
+  width: 60%;
+  position: relative;
+}
+
+.client-logo {
+  display: block;
+  max-width: 200px;
+  max-height: 50px;
+}
+
+.client-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+
+}
+
+.client-header {
+  padding: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  position: relative;
+}
+
+.client-header::after{
+  content: '';
+  width: 200vw;
+  height: 2px;
+  background-color: #dadada;
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+  right: 0;
+}
+
+
+
+.search-block {
+  text-align: right;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#search {
+  border: 1px solid #e8e8e8;
+  border-radius: 2px;
+  height: 42px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+#search_mini_form .search-button {
+  background: #0c4465 url("../img/search-icon.png") no-repeat scroll center center / 28px auto;
+  border: 0 none;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  height: 42px;
+  position: absolute;
+  right: 0;
+  text-indent: -9999px;
+  width: 42px;
+  cursor: pointer;
+  top: 0;
+}
+
+.clearfix {
+  clear: both;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0px 5%;
+  }
+
+  .search-block {
+    width: 85%;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .client-logo-block {
+    text-align: center;
+    width: 100%;
+  }
+
+  .client-logo {
+    display: block;
+    margin: 20px auto;
+    max-width: 150px;
+  }
+
+  .searchfield-block {
+    position: relative;
+    width: 90%;
+
+  }
+
+}
